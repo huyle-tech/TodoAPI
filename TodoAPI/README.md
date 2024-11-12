@@ -67,6 +67,21 @@ python manage.py runserver
 python manage.py test
 ```
 
+## How to get Token
+
+To authenticate with API, user need to obtain a token. User can get the token by following these steps:
+
+### Using cURL
+
+```bash
+curl -X POST -d "username=<your-username>&password=<your-password>" http://127.0.0.1.8000/api/token/
+```
+
+### Using Postman
+
+• Send a `POST` request to URL `/api/token/` with the `username` and `password` data to get the token.
+
+
 ## API Endpoints
 
 | Method | Endpoint | Description |
@@ -99,6 +114,7 @@ TodoAPI/
     │   ├── tests.py
     │   ├── urls.py
     │   ├── views.py
+    ├── .gitignore
     ├── db.sqlite3
     ├── manage.py
     ├── README.md
